@@ -1,0 +1,47 @@
+body{
+
+    background-color: #0b0d17;;
+    color: white;
+
+}
+
+.hero-section {
+            padding: 40px;
+            text-align: center;
+        }
+
+
+nav {
+    background-color: #161b22;
+    padding: 1px;
+    text-align: center;
+    margin-right: 325px;
+    margin-left: 325px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #ca7b06;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+}
+
+button{
+    background-color: #0b0d17;
+}
+
+button:hover {
+    background-color: #0e709a;
+    transition-duration: 0.5s;
+}
