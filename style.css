@@ -45,3 +45,29 @@ button:hover {
     background-color: #0e709a;
     transition-duration: 0.5s;
 }
+
+table {
+    margin: 20px auto;
+    margin-top: 100px;
+    width: 90%;
+    border-collapse: collapse;
+    color: whitesmoke;
+    font-family: sans-serif;
+
+}
+
+th, td{
+    border: 1px solid #30363d;
+    padding: 10px;  
+    text-align: center;
+}
+
+th{
+    background-color: #161b22;
+    color: #f0e68c;
+}
+
+tr:hover{
+    background-color: #21262d;
+    transition-duration: 0.2s;
+}
