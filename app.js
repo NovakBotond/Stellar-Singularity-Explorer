@@ -52,8 +52,28 @@ $(document).ready(function()) {
     }
 
 
-    
 
+    // Adding Element
+
+    const newRow = `
+        <tr>
+            <td>${id}</td>
+            <td>${name}</td>
+            <td>${type}</td>
+            <td>${mass}</td>
+            <td>${dilation}</td>
+            <td>${distance}</td>
+        
+        </tr>
+`
+
+        $('table tbody').append(newRow);
+
+
+        $('table tbody tr:last').hide().fadeIn(1000);
+
+        //Clearing inputs after succesful input
+        $('input').val('');
 
 
 })
