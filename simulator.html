@@ -19,9 +19,45 @@
             <button><li><a href="about.html">About us</a></li></button>
         </ul>
     </nav>
-
     <header>
-        <center><h1>Stellar Singularity Explorer | Escape Lab</h1></header></center>
+        <center><h1>Relativistic Escape Velocity Lab</h1></header></center>
+
+        <main>
+            <p>Calculate the 4th-dimensional(time) dilation of a probe based on velocity and proximity.</p>
+
+            <form id="sim-control-panel">
+                <fieldset>
+                    <legend>Mission Configuration</legend>
+
+                    <label>Probe Designation:</label>
+                    <input type="text" id="probe-id" placeholder="e.g. ICARUS-01">
+
+                    <label>Launch Date:</label>
+                    <input type="date" id="launch-date">
+
+                    <label>Engine Glow (Shift):</label>
+                    <input type="color" id="engine-color" value="#00ffff">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Propulsion System:</legend>
+                    <p>Engine Type:</p>
+                    <label><input type="radio" name="engine" value="ion" checked><b>Ion Drive:</b> Low thrust, high effeciency (sub-light).</label><br>
+                    <label><input type="radio" name="engine" value="plasma"><b>VASIMR Plasma Drive:</b> Accelerated particle streams for interplanetary travel.</label><br>
+                    <label><input type="radio" name="engine" value="antimatter"><b>Antimatter Drive:</b> Uses matter-antimatter annihilation for extreme velocity.</label><br>
+                    <label><input type="radio" name="engine" value="alcubierre"><b>Alcubierre Warp Drive:</b> Contracts space-time in front of the craft.</label><br>
+                    <label><input type="radio" name="engine" value="singularity"><b>Singularity Drive:</b> Harnesses a micro-black hole for artificial gravity propulsion</label><br><br>
+                    <label><input type="checkbox" id="shield-toggle"> Activate Radiation Shielding </label>
+                </fieldset>
+                
+                <label>Pre-Flight Notes: </label>
+                <textarea id="mission-notes" rows="3" placeholder="Enter manual telemetry data..."></textarea>
+
+                <button type="button" id="start-sim">Run Simulation</button>
+            </form>
+
+            <div id="sim-display"></div>
+        </main>
     
 
 
