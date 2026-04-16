@@ -70,7 +70,7 @@ $(document).ready(function() {
 
 
         $('table tbody tr:last').hide().fadeIn(1000);
-            
+
 
         //Clearing inputs after succesful input
         $('input').val('');
@@ -78,3 +78,27 @@ $(document).ready(function() {
     }
 });
 });
+
+$('#start-sim').on('click', function() {
+
+    const pID = $('#probe-id').val();
+    const notes = $('#mission-notes').val();
+    const engine = $('input[name="engine"]:checked').val();
+    const shield = $('#shield-toggle').is(':checked');
+
+    // Checking form
+
+    if(pID === "" || notes === "") {
+        alert("Mission Aborted: Missing flight data!");
+        if(pID === "") $('#probe-id').css('border', '2px solid red');
+        if(notes === "") $('#mission-notes').css('border', '2px solid red');
+    } else {
+        $('#probe-id, #mission-notes').css('border', '1px solid #ccc');
+
+        let status = shielded ? "Safe" : "Critical Damage";
+        let warpFactor = (engine === "warp") ? "8.5c" : "0.2c";
+    }
+
+    
+
+})
