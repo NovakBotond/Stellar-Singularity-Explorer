@@ -16,7 +16,7 @@
             <button><li><a href="index.html" class="active">Home</a></li></button>
             <button><li><a href="archive.html">Stellar Archive</a></li></button>
             <button><li><a href="simulator.html">Escape Lab</a></li></button>
-            <button><li><a href="about.html">Documentation</a></li></button>
+            <button><li><a href="about.html">About us</a></li></button>
         </ul>
     </nav>
 
@@ -27,6 +27,30 @@
 <p><b>Mass of an entity is measured in Solar Masses (M&#8857;)</b></p>
 <p>Time dilation factor: For example: 1h*Time dilation factor -> The outcome will be the time that passed in earth while 1 hour passed on the opservers point of view.</p>
 
+
+<section id="add-entity-section">
+    <h3>Register New Discovery</h3>
+    <div class="input-row">
+        <input type="text" id="new-id" placeholder="ID (e.g. B-01)">
+        <input type="text" id="new-name" placeholder="Entity Name">
+        <input type="text" id="new-type" placeholder="Type">
+        <input type="number" id="new-mass" placeholder="Mass (M☉)">
+        <input type="number" id="new-dilation" placeholder="Dilation Factor">
+        <input type="number" id="new-dist" placeholder="Distance (Au)">
+        <style> 
+        #add-btn {
+            color:antiquewhite;
+            background-color: green;
+        }
+        #add-btn:hover{
+            background-color: red;
+            transition-duration: 0.5s;
+        }
+        </style>
+
+        <button type="button" id="add-btn">Add to Archive</button>
+    </div>
+</section>
 
 <table>
     <thead>
