@@ -81,23 +81,22 @@ $(document).ready(function() {
 
 $('#start-sim').on('click', function() {
 
-    const pID = $('#probe-id').val();
+    const pId = $('#probe-id').val();
     const notes = $('#mission-notes').val();
     const engine = $('input[name="engine"]:checked').val();
     const shield = $('#shield-toggle').is(':checked');
 
     // Checking form
 
-    if(pID === "" || notes === "") {
+    if(pId === "" || notes === "") {
         alert("Mission Aborted: Missing flight data!");
-        if(pID === "") $('#probe-id').css('border', '2px solid red');
+        if(pId === "") $('#probe-id').css('border', '2px solid red');
         if(notes === "") $('#mission-notes').css('border', '2px solid red');
     } else {
         $('#probe-id, #mission-notes').css('border', '1px solid #ccc');
 
-        let status = shielded ? "Safe" : "Critical Damage";
+        let status = shield ? "Safe" : "Critical Damage";
         let warpFactor = (engine === "warp") ? "8.5c" : "0.2c";
-    }
 
     const $report = $(`
         <div class="sim-report" style="border-left: 5px solid ${$('#engine-color').val()};">
@@ -109,6 +108,7 @@ $('#start-sim').on('click', function() {
         </div>
         `);
 
-        
-
+        $('#sim-display').empty().append($report);
+        $report.hide().slideDown(600);
+    }
 })

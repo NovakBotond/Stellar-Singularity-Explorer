@@ -292,3 +292,30 @@ tr:hover{
     from { transform: rotate(360deg); }
     to { transform: rotate(0deg); }
 }
+
+
+
+/* Simulation style */
+
+#sim-control-panel {
+    background: #16122b;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #30363d;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.sim-report {
+    background: #0b0d17;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    color: #c9d1d9;
+}
