@@ -99,6 +99,16 @@ $('#start-sim').on('click', function() {
         let warpFactor = (engine === "warp") ? "8.5c" : "0.2c";
     }
 
-    
+    const $report = $(`
+        <div class="sim-report" style="border-left: 5px solid ${$('#engine-color').val()};">
+        <h3>Report for ${pId}</h3>
+        <p><b>Status:</b> ${status}</p>
+        <p><b>Velocity:</b> ${warpFactor}</p>
+        <p><b>Notes:</b> ${notes}</p>
+        <small>Simulated on: ${$('#launch-date').val()}</small>
+        </div>
+        `);
+
+        
 
 })
