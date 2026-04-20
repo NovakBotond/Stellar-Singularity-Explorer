@@ -98,6 +98,26 @@ $('#start-sim').on('click', function() {
         let status = shield ? "Safe" : "Critical Damage";
         let warpFactor = (engine === "warp") ? "8.5c" : "0.2c";
 
+                if(engine === "ion") {
+            warpFactor = "0.5c";
+        }
+        else if(engine === "plasma"){
+            warpFactor = "0.8c";
+        }
+        else if(engine === "antimatter"){
+            warpFactor = "3.0c";
+        }
+        else if(engine === "alcubierre"){
+            warpFactor = "10.0c";
+        }
+        else if(engine === "singularity"){
+            warpFactor = "Instant";
+        }
+        else{
+            warpFactor = "0.0c";
+        }
+
+
     const $report = $(`
         <div class="sim-report" style="border-left: 5px solid ${$('#engine-color').val()};">
         <h3>Report for ${pId}</h3>
